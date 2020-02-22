@@ -11,6 +11,8 @@ class Question extends Model{
             asking: DataTypes.STRING,
             response: DataTypes.STRING,
             order: DataTypes.INTEGER
+        }, {
+            sequelize
         })
     }
 }
