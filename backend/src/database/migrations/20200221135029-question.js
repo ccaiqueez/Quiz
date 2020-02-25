@@ -3,16 +3,11 @@
 module.exports = {
   up: (queryInterface, Sequelize) => {
       return queryInterface.createTable('question', { 
-        id: {
-          type: Sequelize.INTEGER,
-          primaryKey: true,
-          autoIncrement: true,
+        titleId: {
+          type: Sequelize.UUID,
+          references: { model: 'title', key: 'id' },
           alloNull: false
-        },
-        title: {
-          type: Sequelize.INTEGER,
-          alloNull: false
-        },
+        },       
         asking: {
           type: Sequelize.STRING(60),
           alloNull: false

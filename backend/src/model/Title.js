@@ -4,7 +4,7 @@ class Title extends Model{
     static init(sequelize){
         super.init({
             id: {
-                type: DataTypes.INTEGER,
+                type: DataTypes.UUID,
                 primaryKey: true
             },
             category: DataTypes.UUID,

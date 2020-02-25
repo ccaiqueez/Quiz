@@ -7,12 +7,7 @@ module.exports = {
           type: Sequelize.UUID,
           primaryKey: true,
           alloNull: false
-        },
-        user: {
-          type: Sequelize.UUID,
-          references: { model: 'user', key: 'id' },
-          alloNull: false
-        },
+        },        
         name: {
           type: Sequelize.STRING(40),
           alloNull: false
